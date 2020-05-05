@@ -1,5 +1,6 @@
 import * as styles from './shared/styles';
-import * as global from './shared/global';
-import * as animation from './shared/animation';
+import * as global from './shared/styles/global';
 
-export { styles, global, animation };
+import * as AntdComponents from 'antd';
+
+export { styles, global, AntdComponents };
