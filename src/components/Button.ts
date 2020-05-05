@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Button as AntdButton } from 'antd';
+import AntdButton from 'antd/lib/button';
 
-const Button = styled(AntdButton)`
+const Button: typeof AntdButton = styled(AntdButton)`
   background:  ${({ theme }) => theme.button.primary.background} !important;
   color:  ${({ theme }) => theme.button.primary.color} !important;
 `;

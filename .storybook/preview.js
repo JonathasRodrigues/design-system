@@ -24,7 +24,7 @@ addParameters({
 
 addDecorator(withA11y);
 addDecorator(story => (
-  <ThemeProvider>
+  <ThemeProvider theme={'light'}>
     <GlobalStyle />
     {story()}
   </ThemeProvider>

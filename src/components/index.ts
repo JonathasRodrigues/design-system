@@ -1,6 +1,9 @@
 import * as styles from './shared/styles';
 import * as global from './shared/styles/global';
+import ThemeProvider from './shared/styles/ThemeProvider';
 
-import * as AntdComponents from 'antd';
+import Button from './Button';
 
-export { styles, global, AntdComponents };
+export * from 'antd';
+
+export { styles, global, ThemeProvider, Button };
