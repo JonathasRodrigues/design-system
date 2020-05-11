@@ -1,21 +1,17 @@
 import React from 'react';
-import { lightTheme } from './lightTheme';
-import { darkTheme } from './darkTheme';
+import orbita from './orbita';
+import nutror from './nutror';
 import { ThemeProvider as ThemeProviderStyledComponents } from 'styled-components';
+import 'antd/dist/antd.css';
 
 interface IProps {
-  theme: 'light' | 'dark';
+  theme: 'orbita' | 'nutror';
   children: React.ReactElement
 }
 
 const ThemeProvider: React.FC<IProps> = ({ theme, children }) => {
-  if (theme === 'light') {
-    require('antd/dist/antd.css');
-  } else {
-    require('antd/dist/antd.dark.css');
-  }
   return (
-    <ThemeProviderStyledComponents theme={theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProviderStyledComponents theme={theme === 'orbita' ? orbita : nutror}>
       {children}
     </ThemeProviderStyledComponents>
   );

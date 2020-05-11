@@ -4,7 +4,6 @@ import { withA11y } from '@storybook/addon-a11y';
 import { DocsPage } from 'storybook-addon-deps/blocks';
 
 import { GlobalStyle } from '../src/components/shared/styles/global';
-import ThemeProvider from './../src/components/shared/styles/ThemeProvider';
 
 addParameters({
   options: {
@@ -24,9 +23,9 @@ addParameters({
 
 addDecorator(withA11y);
 addDecorator(story => (
-  <ThemeProvider theme={'light'}>
+  <>
     <GlobalStyle />
     {story()}
-  </ThemeProvider>
+  </>
 ));
 
