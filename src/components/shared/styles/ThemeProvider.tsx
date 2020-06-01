@@ -1,19 +1,19 @@
 import React from 'react';
-import orbita from './orbita';
-import nutror from './nutror';
-import { ThemeProvider as ThemeProviderStyledComponents } from 'styled-components';
-import 'antd/dist/antd.css';
+import { ThemeProvider as ThemeProviderMaterialUi } from '@material-ui/core/styles';
+import { themes } from './index';
+import { IThemeType } from '../../../interfaces/Theme';
 
 interface IProps {
-  theme: 'orbita' | 'nutror';
+  theme: IThemeType;
   children: React.ReactElement
 }
 
 const ThemeProvider: React.FC<IProps> = ({ theme, children }) => {
+  const currentTheme = themes.find(t => t.themeName === theme);
   return (
-    <ThemeProviderStyledComponents theme={theme === 'orbita' ? orbita : nutror}>
+    <ThemeProviderMaterialUi theme={currentTheme ? currentTheme :  themes[0]}>
       {children}
-    </ThemeProviderStyledComponents>
+    </ThemeProviderMaterialUi>
   );
 }
 

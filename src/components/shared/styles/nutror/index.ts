@@ -1,4 +1,7 @@
-import { button } from './button';
-import { colors } from './colors';
 
-export default { button, colors };
+import theme from './theme';
+import ITheme from 'interfaces/Theme';
+
+const NutrorTheme: ITheme = { themeName: 'nutror', ...theme };
+
+export default NutrorTheme;
